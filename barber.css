@@ -1689,3 +1689,131 @@ textarea:focus {
         width: 100%;
     }
 }
+
+/* --- Navegación lateral en pantallas grandes --- */
+@media (min-width: 1101px) {
+    :root {
+        --sidebar-width: 276px;
+    }
+
+    body {
+        padding-left: var(--sidebar-width);
+    }
+
+    .site-header {
+        position: fixed;
+        inset: 0 auto 0 0;
+        width: var(--sidebar-width);
+        overflow: hidden;
+        border-right: 1px solid var(--line);
+        border-bottom: 0;
+    }
+
+    .site-header .nav-wrap {
+        width: 100%;
+        max-width: none;
+        height: 100vh;
+        height: 100dvh;
+        min-height: 100vh;
+        min-height: 100dvh;
+        margin: 0;
+        padding: 24px 18px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+
+    .site-header .brand {
+        padding: 0 8px;
+    }
+
+    .site-header .main-nav {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: var(--line-strong) transparent;
+    }
+
+    .site-header .main-nav::before {
+        content: "MENÚ PRINCIPAL";
+        padding: 0 12px 10px;
+        color: var(--muted);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+    }
+
+    .site-header .nav-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .site-header .nav-list li {
+        width: 100%;
+    }
+
+    .site-header .main-nav a.nav-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 11px 12px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        font-size: 0.88rem;
+        white-space: normal;
+    }
+
+    .site-header .main-nav a.nav-link::before {
+        width: 22px;
+        flex: 0 0 22px;
+        margin-right: 9px;
+        color: var(--accent);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .site-header .main-nav a.nav-link[href="#inicio"]::before { content: "⌂"; }
+    .site-header .main-nav a.nav-link[href="#servicios"]::before { content: "✂"; }
+    .site-header .main-nav a.nav-link[href="#galeria"]::before { content: "▧"; }
+    .site-header .main-nav a.nav-link[href="#carrito"]::before { content: "▣"; }
+    .site-header .main-nav a.nav-link[href="#barberos"]::before { content: "♙"; }
+    .site-header .main-nav a.nav-link[href="#testimonios"]::before { content: "★"; }
+    .site-header .main-nav a.nav-link[href="#reserva"]::before { content: "◷"; }
+    .site-header .main-nav a.nav-link[href="#consulta"]::before { content: "⌕"; }
+    .site-header .main-nav a.nav-link[href="#contacto"]::before { content: "✉"; }
+    .site-header .main-nav a.nav-link[href="#administracion"]::before { content: "⚙"; }
+
+    .site-header .main-nav a.nav-link:hover,
+    .site-header .main-nav a.nav-link:focus-visible {
+        border-color: var(--line);
+        transform: translateX(3px);
+    }
+
+    .site-header .nav-actions {
+        width: 100%;
+        margin-top: auto;
+        padding-top: 16px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        border-top: 1px solid var(--line);
+    }
+
+    .site-header .nav-cart,
+    .site-header .nav-cta {
+        width: 100%;
+        border-radius: 11px;
+    }
+
+    .site-header .nav-toggle {
+        display: none;
+    }
+}
