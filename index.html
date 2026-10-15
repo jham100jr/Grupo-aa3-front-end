@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Barber House | Barbería premium · Reserva online</title>
+    <meta name="description"
+        content="Barber House: barbería premium con cortes clásicos y modernos, barba esculpida, afeitado a navaja y productos profesionales. Reserva tu cita online en menos de un minuto." />
+    <meta name="theme-color" content="#0a0d0c" />
+    <meta name="author" content="Barber House" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Barber House" />
+    <meta property="og:title" content="Barber House | Barbería premium y reservas online" />
+    <meta property="og:description"
+        content="Cortes de precisión, barba esculpida y afeitado a navaja. Elige tu barbero y reserva tu cita online." />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon (SVG embebido) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0b'/%3E%3Ccircle cx='32' cy='32' r='25' fill='none' stroke='%23c9a45c' stroke-width='2'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='32' font-weight='700' fill='%23e3c68a'%3EB%3C/text%3E%3C/svg%3E" />
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Imagen principal del hero (mejora el LCP) -->
+    <link rel="preload" as="image" media="(min-width: 641px)"
+        href="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1920&amp;q=75" />
+    <link rel="preload" as="image" media="(max-width: 640px)"
+        href="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=900&amp;q=70" />
+
+    <link rel="stylesheet" href="barber.css" />
+
+    <!-- Activa las animaciones solo si JavaScript está disponible -->
+    <script>document.documentElement.classList.add("js");</script>
+
+    <!-- Datos estructurados (SEO local) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Barber House",
+        "description": "Barbería premium con cortes clásicos y modernos, barba y afeitado a navaja.",
+        "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80",
+        "telephone": "+51932150064",
+        "email": "hola@barberhouse.pe",
+        "priceRange": "S/ 18 - S/ 50",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Principal 245, Centro",
+            "addressCountry": "PE"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "10:00",
+                "closes": "16:00"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- ================= HEADER / NAVEGACIÓN ================= -->
+    <header class="felipe site-header" id="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="#inicio" aria-label="Barber House, ir al inicio">
+                <span class="brand-mark" aria-hidden="true">B</span>
+                <span class="brand-text">
+                    <span class="brand-name">Barber House</span>
+                    <span class="brand-subtitle">Estilo profesional</span>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li><a class="nav-link" href="#carrito">Tienda</a></li>
+                    <li><a class="nav-link" href="#barberos">Barberos</a></li>
+                    <li><a class="nav-link" href="#testimonios">Reseñas</a></li>
+                    <li><a class="nav-link" href="#reserva">Reserva</a></li>
+                    <li><a class="nav-link" href="#consulta">Consulta</a></li>
+                    <li><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li><a class="nav-link" href="#administracion">Admin</a></li>
+                </ul>
+                <div class="nav-mobile-footer">
+                    <a class="btn btn-primary full" href="#reserva">Reservar ahora</a>
+                    <p class="nav-mobile-hours"><span data-icon="clock"></span> Lun–Sáb 09:00–20:00 · Dom 10:00–16:00
+                    </p>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="nav-cart" id="nav-cart" href="#carrito" aria-label="Ver carrito">
+                    <span data-icon="bag"></span>
+                    <span class="nav-cart-count is-empty" id="nav-cart-count" aria-hidden="true">0</span>
+                </a>
+                <a class="btn btn-primary nav-cta" href="#reserva">Reservar ahora</a>
+                <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false"
+                    aria-label="Abrir menú">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+    <main id="contenido">
+        <!-- ================= HERO ================= -->
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <p class="eyebrow">Barbería premium · Desde 2018 <span class="eyebrow-dot"
+                            aria-hidden="true"></span> Agenda online</p>
+                    <h1 id="hero-title">Tu estilo, tu horario, <em>tu confianza.</em></h1>
+                    <p class="hero-copy">
+                        Cortes de precisión, barba esculpida y afeitado a navaja en un espacio diseñado para el
+                        caballero moderno. Elige tu barbero y reserva tu cita en menos de un minuto.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#reserva" class="btn btn-primary btn-lg">
+                            Reservar ahora <span data-icon="arrow" class="btn-arrow"></span>
+                        </a>
+                        <a href="#servicios" class="btn btn-secondary btn-lg">Ver servicios y precios</a>
+                    </div>
+
+                    <ul class="hero-stats" aria-label="Barber House en cifras">
+                        <li>
+                            <strong>1.2k+</strong>
+                            <span>Clientes satisfechos</span>
+                        </li>
+                        <li>
+                            <strong>4.9/5</strong>
+                            <span>Valoración promedio</span>
+                        </li>
+                        <li>
+                            <strong>7 días</strong>
+                            <span>Atención semanal</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="hero-card reveal" style="--delay: 150ms" aria-labelledby="hours-title">
+                    <span class="card-badge" id="open-status">Horario</span>
+                    <h2 class="hero-card-title" id="hours-title">Horario de atención</h2>
+                    <ul class="hours-list" id="hours-list">
+                        <li data-days="1,2,3,4,5,6"><span>Lunes a sábado</span><strong>09:00 – 20:00</strong></li>
+                        <li data-days="0"><span>Domingo</span><strong>10:00 – 16:00</strong></li>
+                    </ul>
+                    <div class="next-slot">
+                        <span class="next-slot-label"><span data-icon="calendar"></span> Próximo turno disponible</span>
+                        <strong id="next-slot">Calculando…</strong>
+                    </div>
+                    <a href="#reserva" class="btn btn-outline full" id="next-slot-btn">Reservar este turno</a>
+                </aside>
+            </div>
+
+            <a href="#servicios" class="scroll-cue" aria-label="Desplazarse a la sección de servicios">
+                <span class="scroll-cue-mouse" aria-hidden="true"></span>
+            </a>
+        </section>
+
+        <!-- ================= INTRO ================= -->
+        <section class="section intro-strip" aria-labelledby="intro-title">
+            <div class="container">
+                <div class="strip-grid reveal">
+                    <div>
+                        <p class="small-label">Atención premium</p>
+                        <h2 id="intro-title">Un espacio pensado para una experiencia masculina impecable.</h2>
+                    </div>
+                    <p>
+                        Simplificamos la gestión de reservas para que cada cliente tenga una experiencia fluida y para
+                        que el equipo administre horarios, estados y disponibilidad sin errores.
+                    </p>
+                    <div class="modern-trust">
+                        <span><b>✓</b> Reserva en línea</span>
+                        <span><b>✓</b> Precios transparentes</span>
+                        <span><b>✓</b> Atención profesional</span>
+                    </div>
+                </div>
+
+                <ul class="pillars">
+                    <li class="pillar reveal">
+                        <span class="pillar-num">01</span>
+                        <h3>Precisión</h3>
+                        <p>Técnicas clásicas y modernas ejecutadas con detalle milimétrico.</p>
+                    </li>
+                    <li class="pillar reveal" style="--delay: 100ms">
+                        <span class="pillar-num">02</span>
+                        <h3>Ritual</h3>
+                        <p>Toalla caliente, productos premium y una bebida de cortesía.</p>
+                    </li>
+                    <li class="pillar reveal" style="--delay: 200ms">
+                        <span class="pillar-num">03</span>
+                        <h3>Puntualidad</h3>
+                        <p>Tu reserva se respeta. Sin esperas innecesarias.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= SERVICIOS ================= -->
+        <section id="servicios" class="section services section-alt" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="small-label">Servicios</p>
+                    <h2 class="section-title" id="services-title">Soluciones a medida para cada estilo</h2>
+                    <p class="section-lead">Precios fijos, sin sorpresas. Cada servicio incluye asesoría de estilo y
+                        acabado con productos profesionales.</p>
+                </div>
+
+                <div id="services-list" class="services-grid"></div>
+            </div>
+        </section>
+
+        <!-- ================= GALERÍA ================= -->
+        <section id="galeria" class="section gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="small-label">Galería</p>
+                    <h2 class="section-title" id="gallery-title">Estilo y precisión en cada detalle</h2>
+                    <p class="section-lead">Toca cualquier imagen para verla en grande.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+                            data-full="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                            alt="Barbero realizando un fade de precisión con peine y máquina" width="800" height="1200"
+                            loading="lazy" decoding="async" />
+                        <figcaption>Fade de precisión <span class="gallery-zoom" data-icon="zoom"></span></figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" style="--delay: 80ms">
+                        <img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=1000&amp;q=75"
+                            data-full="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                            alt="Barbero cortando el cabello de un cliente en la barbería" width="1000" height="667"
+                            loading="lazy" decoding="async" />
+                        <figcaption>Corte artesanal <span class="gallery-zoom" data-icon="zoom"></span></figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" style="--delay: 160ms">
+                        <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&amp;fit=crop&amp;w=700&amp;q=75"
+                            data-full="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                            alt="Perfilado de barba con tijera en blanco y negro" width="700" height="1050"
+                            loading="lazy" decoding="async" />
+                        <figcaption>Barba esculpida <span class="gallery-zoom" data-icon="zoom"></span></figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&amp;fit=crop&amp;w=700&amp;q=75"
+                            data-full="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                            alt="Sillón de barbero clásico de cuero marrón" width="700" height="467" loading="lazy"
+                            decoding="async" />
+                        <figcaption>Sillón clásico <span class="gallery-zoom" data-icon="zoom"></span></figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" style="--delay: 80ms">
+                        <img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?auto=format&amp;fit=crop&amp;w=1100&amp;q=75"
+                            data-full="https://images.unsplash.com/photo-1596728325488-58c87691e9af?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                            alt="Afeitado tradicional a navaja en la barbería" width="1100" height="733" loading="lazy"
+                            decoding="async" />
+                        <figcaption>Afeitado a navaja <span class="gallery-zoom" data-icon="zoom"></span></figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" style="--delay: 160ms">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1000&amp;q=75"
+                            data-full="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                            alt="Herramientas profesionales de barbería sobre una mesa de madera" width="1000"
+                            height="667" loading="lazy" decoding="async" />
+                        <figcaption>Herramientas pro <span class="gallery-zoom" data-icon="zoom"></span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TIENDA / CARRITO ================= -->
+        <section id="carrito" class="section shop section-alt" aria-labelledby="shop-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="small-label">Tienda</p>
+                    <h2 class="section-title" id="shop-title">Compra tus productos favoritos</h2>
+                    <p class="section-lead">Los mismos productos que usamos en el sillón. Compra online y recoge en
+                        el local sin costo.</p>
+                </div>
+
+                <div class="shop-layout">
+                    <div class="shop-products">
+                        <div id="shop-list" class="shop-grid"></div>
+                    </div>
+
+                    <aside class="cart-panel reveal" aria-labelledby="cart-title">
+                        <div class="cart-header">
+                            <h3 id="cart-title"><span data-icon="bag"></span> Tu carrito</h3>
+                            <span id="cart-count" class="cart-count">0 items</span>
+                        </div>
+
+                        <ul id="cart-items" class="cart-items"></ul>
+
+                        <div class="cart-totals">
+                            <div class="cart-row"><span>Subtotal</span><span id="cart-subtotal">S/ 0</span></div>
+                            <div class="cart-row"><span>Recojo en local</span><span class="text-success">Gratis</span>
+                            </div>
+                            <div class="cart-summary">
+                                <span>Total</span>
+                                <strong id="cart-total">S/ 0</strong>
+                            </div>
+                        </div>
+
+                        <button id="checkout-btn" type="button" class="btn btn-primary full">Comprar ahora</button>
+                        <button id="cart-clear" type="button" class="cart-clear" hidden>Vaciar carrito</button>
+                        <div id="cart-message" class="cart-message" aria-live="polite"></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BARBEROS ================= -->
+        <section id="barberos" class="section barbers" aria-labelledby="barbers-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="small-label">Equipo</p>
+                    <h2 class="section-title" id="barbers-title">Conoce a nuestros barberos</h2>
+                    <p class="section-lead">Profesionales certificados con disponibilidad en tiempo real.</p>
+                </div>
+
+                <div id="barbers-list" class="barbers-grid"></div>
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIOS ================= -->
+        <section id="testimonios" class="section testimonials section-alt" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="small-label">Reseñas</p>
+                    <h2 class="section-title" id="testimonials-title">Lo que dicen nuestros clientes</h2>
+                </div>
+
+                <div class="rating-summary reveal">
+                    <strong>4.9</strong>
+                    <div>
+                        <span class="stars" role="img" aria-label="4.9 de 5 estrellas">★★★★★</span>
+                        <span class="rating-caption">Basado en más de 320 reseñas verificadas</span>
+                    </div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial-card reveal">
+                        <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“La atención es impecable, el corte quedó exactamente como lo pedí y el ambiente es muy
+                                premium.”</p>
+                        </blockquote>
+                        <footer class="testimonial-author">
+                            <span class="author-avatar" aria-hidden="true">MR</span>
+                            <span class="author-meta">
+                                <strong>Mateo R.</strong>
+                                <span>Cliente frecuente</span>
+                            </span>
+                        </footer>
+                    </article>
+
+                    <article class="testimonial-card reveal" style="--delay: 120ms">
+                        <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“Me encantó la atención personalizada y el perfilado de barba. Se nota mucho la
+                                experiencia del equipo.”</p>
+                        </blockquote>
+                        <footer class="testimonial-author">
+                            <span class="author-avatar" aria-hidden="true">DP</span>
+                            <span class="author-meta">
+                                <strong>Diego P.</strong>
+                                <span>Cliente premium</span>
+                            </span>
+                        </footer>
+                    </article>
+
+                    <article class="testimonial-card reveal" style="--delay: 240ms">
+                        <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“Muy buena relación entre calidad, puntualidad y estilo. El mejor lugar para cuidarte
+                                la imagen.”</p>
+                        </blockquote>
+                        <footer class="testimonial-author">
+                            <span class="author-avatar" aria-hidden="true">JS</span>
+                            <span class="author-meta">
+                                <strong>Javier S.</strong>
+                                <span>Nuevo cliente</span>
+                            </span>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= RESERVA ================= -->
+        <section id="reserva" class="section booking" aria-labelledby="booking-title">
+            <div class="container booking-layout">
+                <div class="booking-copy reveal">
+                    <p class="small-label">Reserva</p>
+                    <h2 class="section-title" id="booking-title">Agenda tu cita en pocos pasos</h2>
+                    <p>
+                        Elige tu servicio, selecciona al barbero ideal y confirma la fecha y hora según la
+                        disponibilidad.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span class="feature-icon" data-icon="shield"></span><span>Validación de datos en tiempo
+                                real</span></li>
+                        <li><span class="feature-icon" data-icon="clock"></span><span>Horarios ocupados bloqueados
+                                automáticamente</span></li>
+                        <li><span class="feature-icon" data-icon="check"></span><span>Código único de reserva al
+                                confirmar</span></li>
+                    </ul>
+
+                    <div class="booking-summary" id="booking-summary">
+                        <p class="booking-summary-title"><span data-icon="calendar"></span> Resumen de tu cita</p>
+                        <dl>
+                            <div>
+                                <dt>Servicio</dt>
+                                <dd data-summary="servicio" class="is-empty">Por elegir</dd>
+                            </div>
+                            <div>
+                                <dt>Barbero</dt>
+                                <dd data-summary="barbero" class="is-empty">Por elegir</dd>
+                            </div>
+                            <div>
+                                <dt>Fecha</dt>
+                                <dd data-summary="fecha" class="is-empty">Por elegir</dd>
+                            </div>
+                            <div>
+                                <dt>Hora</dt>
+                                <dd data-summary="hora" class="is-empty">Por elegir</dd>
+                            </div>
+                            <div>
+                                <dt>Duración</dt>
+                                <dd data-summary="duracion" class="is-empty">Por elegir</dd>
+                            </div>
+                        </dl>
+                        <div class="booking-summary-total">
+                            <span>Total a pagar en el local</span>
+                            <strong data-summary="precio">S/ 0</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-card reveal" id="booking-card" style="--delay: 120ms">
+                    <div class="booking-card-head">
+                        <h3>Datos de la reserva</h3>
+                        <span>Todos los campos son obligatorios</span>
+                    </div>
+
+                    <form id="reservation-form" novalidate>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="cliente">Nombre completo</label>
+                                <input type="text" id="cliente" name="cliente" placeholder="Ej. José Ramírez"
+                                    autocomplete="name" maxlength="60" required aria-describedby="cliente-error" />
+                                <p class="field-error" id="cliente-error"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Ej. 999 123 456"
+                                    autocomplete="tel" inputmode="tel" maxlength="18" required
+                                    aria-describedby="telefono-error" />
+                                <p class="field-error" id="telefono-error"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="servicio">Servicio</label>
+                                <select id="servicio" name="servicio" required
+                                    aria-describedby="servicio-error"></select>
+                                <p class="field-error" id="servicio-error"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="barbero">Barbero</label>
+                                <select id="barbero" name="barbero" required aria-describedby="barbero-error"></select>
+                                <p class="field-error" id="barbero-error"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="fecha">Fecha</label>
+                                <input type="date" id="fecha" name="fecha" required aria-describedby="fecha-error" />
+                                <p class="field-error" id="fecha-error"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="hora">Hora</label>
+                                <select id="hora" name="hora" required disabled aria-describedby="hora-hint hora-error">
+                                    <option value="">Primero elige un barbero</option>
+                                </select>
+                                <p class="field-hint" id="hora-hint">Turnos cada 30 minutos.</p>
+                                <p class="field-error" id="hora-error"></p>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg full" id="reservation-submit">Confirmar
+                            reserva</button>
+                        <p class="form-note"><span data-icon="shield"></span> Recibirás un código único para consultar
+                            tu cita.</p>
+                        <div id="reservation-message" class="form-message" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONSULTA ================= -->
+        <section id="consulta" class="section consultation section-alt" aria-labelledby="consult-title">
+            <div class="container">
+                <div class="consultation-box reveal">
+                    <div class="consultation-head">
+                        <p class="small-label">Consulta</p>
+                        <h2 class="section-title" id="consult-title">Busca tu reserva por código</h2>
+                        <p>Ingresa el código que recibiste al confirmar tu cita para ver su estado.</p>
+                    </div>
+
+                    <div class="consultation-search">
+                        <form id="search-form" class="search-form" role="search" novalidate>
+                            <label for="search-code" class="sr-only">Código de reserva</label>
+                            <div class="input-icon">
+                                <span data-icon="search"></span>
+                                <input type="text" id="search-code" placeholder="Ej. BR-9F3K2" maxlength="12"
+                                    autocomplete="off" autocapitalize="characters" spellcheck="false" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Consultar</button>
+                        </form>
+                        <p class="search-hint">Códigos de prueba:
+                            <button type="button" class="code-chip" data-code="BR-9F3K2">BR-9F3K2</button>
+                            <button type="button" class="code-chip" data-code="BR-2X1Q8">BR-2X1Q8</button>
+                            <button type="button" class="code-chip" data-code="BR-7L4M9">BR-7L4M9</button>
+                        </p>
+                    </div>
+
+                    <div id="search-result" class="search-result" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACTO ================= -->
+        <section id="contacto" class="section contact" aria-labelledby="contact-title">
+            <div class="container contact-layout">
+                <div class="contact-info reveal">
+                    <p class="small-label">Contacto</p>
+                    <h2 class="section-title" id="contact-title">Hablemos de tu próximo look</h2>
+                    <p>Si tienes dudas sobre servicios, horarios o promociones, escríbenos y te responderemos a la
+                        brevedad.</p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon" data-icon="pin"></span>
+                            <div><small>Dirección</small><strong>Av. Principal 245, Centro</strong></div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" data-icon="phone"></span>
+                            <div><small>Teléfono</small><a href="tel:+51932150064">+51 932 150 064</a></div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" data-icon="mail"></span>
+                            <div><small>Email</small><a href="mailto:hola@barberhouse.pe">hola@barberhouse.pe</a></div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" data-icon="clock"></span>
+                            <div><small>Horario</small><strong>Lun–Sáb 09:00–20:00 · Dom 10:00–16:00</strong></div>
+                        </li>
+                    </ul>
+
+                    <a class="btn btn-whatsapp"
+                        href="https://wa.me/51932150064?text=Hola%20Barber%20House%2C%20tengo%20una%20consulta."
+                        target="_blank" rel="noopener noreferrer">
+                        <span data-icon="whatsapp"></span> Escríbenos por WhatsApp
+                    </a>
+                </div>
+
+                <form id="contact-form" class="contact-form reveal" style="--delay: 120ms" novalidate>
+                    <div class="contact-form-head">
+                        <h3>Envíanos un mensaje</h3>
+                        <p>Respondemos en menos de 24 horas.</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-name">Nombre</label>
+                        <input type="text" id="contact-name" name="contact-name" placeholder="Tu nombre"
+                            autocomplete="name" maxlength="60" required aria-describedby="contact-name-error" />
+                        <p class="field-error" id="contact-name-error"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-email">Correo</label>
+                        <input type="email" id="contact-email" name="contact-email" placeholder="tuemail@ejemplo.com"
+                            autocomplete="email" maxlength="80" required aria-describedby="contact-email-error" />
+                        <p class="field-error" id="contact-email-error"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-message">Mensaje</label>
+                        <textarea id="contact-message" name="contact-message" rows="5"
+                            placeholder="Escribe tu mensaje..." maxlength="600" required
+                            aria-describedby="contact-message-error"></textarea>
+                        <p class="field-error" id="contact-message-error"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full" id="contact-submit">Enviar mensaje</button>
+                    <div id="contact-response" class="contact-response" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= PANEL ADMINISTRATIVO ================= -->
+        <section id="administracion" class="section admin section-alt" aria-labelledby="admin-title">
+            <div class="container">
+                <div class="section-header admin-header reveal">
+                    <div>
+                        <p class="small-label">Panel administrativo</p>
+                        <h2 class="section-title" id="admin-title">Gestión de reservas</h2>
+                        <p class="admin-date" id="admin-date"></p>
+                    </div>
+                    <button type="button" class="btn btn-ghost btn-sm" id="admin-reset">
+                        <span data-icon="refresh"></span> Restablecer datos demo
+                    </button>
+                </div>
+
+                <div class="admin-summary reveal">
+                    <div class="summary-card">
+                        <div class="summary-head"><span class="summary-label">Total</span><span class="summary-icon"
+                                data-icon="layers"></span></div>
+                        <strong id="summary-total">0</strong>
+                    </div>
+                    <div class="summary-card warning">
+                        <div class="summary-head"><span class="summary-label">Pendientes</span><span
+                                class="summary-icon" data-icon="hourglass"></span></div>
+                        <strong id="summary-pending">0</strong>
+                    </div>
+                    <div class="summary-card success">
+                        <div class="summary-head"><span class="summary-label">Confirmadas</span><span
+                                class="summary-icon" data-icon="checkCircle"></span></div>
+                        <strong id="summary-confirmed">0</strong>
+                    </div>
+                    <div class="summary-card info">
+                        <div class="summary-head"><span class="summary-label">Completadas</span><span
+                                class="summary-icon" data-icon="star"></span></div>
+                        <strong id="summary-completed">0</strong>
+                    </div>
+                    <div class="summary-card danger">
+                        <div class="summary-head"><span class="summary-label">Canceladas</span><span
+                                class="summary-icon" data-icon="ban"></span></div>
+                        <strong id="summary-cancelled">0</strong>
+                    </div>
+                    <div class="summary-card gold">
+                        <div class="summary-head"><span class="summary-label">Ingresos</span><span class="summary-icon"
+                                data-icon="coins"></span></div>
+                        <strong id="summary-revenue">S/ 0</strong>
+                    </div>
+                </div>
+
+                <div class="table-toolbar reveal">
+                    <div class="input-icon">
+                        <span data-icon="search"></span>
+                        <input type="search" id="admin-search" placeholder="Buscar por código, cliente o barbero"
+                            aria-label="Buscar reservas por código, cliente o barbero" autocomplete="off" />
+                    </div>
+                    <select id="admin-status-filter" aria-label="Filtrar reservas por estado">
+                        <option value="all">Todos los estados</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="Confirmada">Confirmada</option>
+                        <option value="Completada">Completada</option>
+                        <option value="Cancelada">Cancelada</option>
+                    </select>
+                    <span class="table-count" id="admin-count" aria-live="polite"></span>
+                </div>
+
+                <div class="table-wrap reveal">
+                    <table class="admin-table">
+                        <caption class="sr-only">Listado de reservas registradas</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Código</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Barbero</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservations-table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="#inicio" aria-label="Barber House, volver al inicio">
+                    <span class="brand-mark" aria-hidden="true">B</span>
+                    <span class="brand-text">
+                        <span class="brand-name">Barber House</span>
+                        <span class="brand-subtitle">Estilo profesional</span>
+                    </span>
+                </a>
+                <p>Barbería premium para el caballero moderno. Cortes de precisión, barba esculpida y un ritual de
+                    cuidado que se siente desde que cruzas la puerta.</p>
+                <a class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/51932150064?text=Hola%20Barber%20House%2C%20quiero%20reservar%20una%20cita."
+                    target="_blank" rel="noopener noreferrer">
+                    <span data-icon="whatsapp"></span> WhatsApp
+                </a>
+            </div>
+
+            <nav class="footer-col" aria-label="Enlaces del sitio">
+                <h3>Explora</h3>
+                <ul class="footer-links">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#carrito">Tienda</a></li>
+                    <li><a href="#barberos">Barberos</a></li>
+                    <li><a href="#testimonios">Reseñas</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Accesos rápidos">
+                <h3>Clientes</h3>
+                <ul class="footer-links">
+                    <li><a href="#reserva">Reservar cita</a></li>
+                    <li><a href="#consulta">Consultar reserva</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#administracion">Panel administrativo</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul class="footer-contact">
+                    <li><span data-icon="pin"></span><span>Av. Principal 245, Centro</span></li>
+                    <li><span data-icon="phone"></span><a href="tel:+51932150064">+51 932 150 064</a></li>
+                    <li><span data-icon="mail"></span><a href="mailto:hola@barberhouse.pe">hola@barberhouse.pe</a></li>
+                    <li><span data-icon="clock"></span><span>Lun–Sáb 09:00–20:00<br />Dom 10:00–16:00</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-inner">
+            <p>© <span id="year">2026</span> Barber House • Sistema de reservas profesional</p>
+            <a href="#inicio" class="back-top">Volver arriba <span data-icon="arrowUp"></span></a>
+        </div>
+    </footer>
+
+    <!-- ================= WHATSAPP FLOTANTE ================= -->
+    <a class="whatsapp-float"
+        href="https://wa.me/51932150064?text=Hola%20Barber%20House%2C%20quiero%20reservar%20una%20cita." target="_blank"
+        rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+        <span class="whatsapp-tooltip" aria-hidden="true">¿Reservamos por WhatsApp?</span>
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+                d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0C5.48 0 .04 5.43.04 12.02c0 2.12.56 4.18 1.62 6l-1.7 6.220 6.38-1.67a11.94 11.94 0 0 0 5.72 1.73h.01c6.58 0 11.9-5.43 11.9-12.1a11.9 11.9 0 0 0-3.45-8.68ZM12.060 21.9c-1.83 0-3.62-.49-5.2-1.41l-.37-.22-3.79 1 1-3.68-.24-.38a9.88 9.88 0 0 1-1.53-5.19c0-5.47 4.46-9.92 9.96-9.92a9.9 9.9 0 0 1 7.03 3 9.9 9.9 0 0 1 2.92 7.08c0 5.48-4.46 9.94-9.950 9.94Zm5.44-7.42c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.52-1.8-1.69-2.1-.18-.3-.02-.47.13-.62.14-.14.3-.35.46-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.52-.08-.15-.68-1.64-.94-2.25-.25-.59-.5-.5-.68-.51l-.58-.01c-.2 0-.52.07-.8.38-.28.3-1.07 1.04-1.07 2.54 0 1.5 1.1 2.96 1.250 3.16.15.2 2.14 3.27 5.2 4.58.73.31 1.3.49 1.74.63.73.23 1.39.2 1.92.12.58-.09 1.77-.72 2.020-1.42.25-.7.25-1.3.17-1.420-.08-.12-.28-.2-.58-.35Z" />
+        </svg>
+    </a>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada de la galería"
+        hidden>
+        <span class="lightbox-counter" id="lightbox-counter"></span>
+        <button class="lightbox-btn lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar imagen">
+            <span data-icon="close"></span>
+        </button>
+        <button class="lightbox-btn lightbox-nav lightbox-prev" id="lightbox-prev" type="button"
+            aria-label="Imagen anterior">
+            <span data-icon="chevronLeft"></span>
+        </button>
+        <figure class="lightbox-figure">
+            <img class="lightbox-img" id="lightbox-img"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" />
+            <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-btn lightbox-nav lightbox-next" id="lightbox-next" type="button"
+            aria-label="Imagen siguiente">
+            <span data-icon="chevronRight"></span>
+        </button>
+    </div>
+
+    <!-- Notificaciones breves -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="barber.js"></script>
+</body>
+
+</html>
